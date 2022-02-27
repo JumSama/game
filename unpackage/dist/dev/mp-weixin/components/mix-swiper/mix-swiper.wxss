@@ -1,0 +1,28 @@
+
+.swiper.data-v-9eb917b8 {
+	position: relative;
+}
+.swiper.data-v-9eb917b8::after {
+	content: '新游尝鲜';
+	position: absolute;
+	top: 0;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #FFFFFF;
+	width: 100%;
+	background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,1));
+}
+.swiper-item.data-v-9eb917b8 {
+	position: relative;
+	z-index: -1;
+}
+.introduction.data-v-9eb917b8 {
+	z-index: 999;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));
+	padding: 10rpx;
+}
+

@@ -1,0 +1,1 @@
+<view><search-input vue-id="bda12f3c-1" fake="{{false}}" hotItem="最勇敢的你 2月22日上线" bind:__l="__l"></search-input><view class="search-body"><search-find vue-id="bda12f3c-2" list="{{findList}}" bind:__l="__l"></search-find><search-hot vue-id="bda12f3c-3" leaderboard="{{gameRank}}" bind:__l="__l"></search-hot></view></view>

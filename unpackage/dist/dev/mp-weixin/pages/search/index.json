@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-input": "/components/search-input/search-input",
+    "search-find": "/components/search-find/search-find",
+    "search-hot": "/components/search-hot/search-hot"
+  }
+}
