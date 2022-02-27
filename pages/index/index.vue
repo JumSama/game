@@ -2,7 +2,9 @@
 	<view>
 		<search-input :displayItem="displayGame"></search-input>
 		<mix-swiper :imgsUrl="imgUrlList"></mix-swiper>
-		<mix-card :gameInfoList="imgUrlList"></mix-card>	
+		<view class="card">
+			<mix-card v-for="item in imgUrlList" :key="item.id" :cardIntro="item.intro" :cardTitle="item.title" :imgurl="item.url"></mix-card>
+		</view>	
 	</view>
 </template>
 
@@ -43,7 +45,5 @@
 	.category-title {
 		margin: 10rpx 0;
 	}
-	.container{
-		padding-bottom: var(--window-bottom) ;	
-	}
+
 </style>

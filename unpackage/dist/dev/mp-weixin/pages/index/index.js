@@ -105,13 +105,13 @@ var components
 try {
   components = {
     searchInput: function() {
-      return __webpack_require__.e(/*! import() | components/search-input/search-input */ "components/search-input/search-input").then(__webpack_require__.bind(null, /*! @/components/search-input/search-input.vue */ 43))
+      return __webpack_require__.e(/*! import() | components/search-input/search-input */ "components/search-input/search-input").then(__webpack_require__.bind(null, /*! @/components/search-input/search-input.vue */ 46))
     },
     mixSwiper: function() {
-      return __webpack_require__.e(/*! import() | components/mix-swiper/mix-swiper */ "components/mix-swiper/mix-swiper").then(__webpack_require__.bind(null, /*! @/components/mix-swiper/mix-swiper.vue */ 50))
+      return __webpack_require__.e(/*! import() | components/mix-swiper/mix-swiper */ "components/mix-swiper/mix-swiper").then(__webpack_require__.bind(null, /*! @/components/mix-swiper/mix-swiper.vue */ 86))
     },
     mixCard: function() {
-      return __webpack_require__.e(/*! import() | components/mix-card/mix-card */ "components/mix-card/mix-card").then(__webpack_require__.bind(null, /*! @/components/mix-card/mix-card.vue */ 57))
+      return __webpack_require__.e(/*! import() | components/mix-card/mix-card */ "components/mix-card/mix-card").then(__webpack_require__.bind(null, /*! @/components/mix-card/mix-card.vue */ 93))
     }
   }
 } catch (e) {
@@ -167,6 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
 //
 //
 //

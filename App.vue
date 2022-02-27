@@ -26,6 +26,7 @@
 	page {
 		background-color: #ffffff;
 		// font-size: 12px;
+		padding-bottom: var(--window-bottom);
 	}
 	
 	/* #endif */
