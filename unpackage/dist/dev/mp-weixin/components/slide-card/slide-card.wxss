@@ -1,0 +1,25 @@
+
+.slide-bar.data-v-07e1b044 {
+	margin: 60rpx 0;
+}
+.slide-card.data-v-07e1b044 {
+	display: flex;
+	overflow-x: scroll;
+	gap: 25rpx
+}
+.slide-title.data-v-07e1b044 {
+	margin: 20rpx 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.slide-card.data-v-07e1b044::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+}
+.card-item.data-v-07e1b044 {
+	text-align: center;
+	width: 20vw;
+}
+

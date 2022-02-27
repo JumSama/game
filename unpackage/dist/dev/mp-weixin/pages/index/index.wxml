@@ -1,0 +1,1 @@
+<view class="data-v-57280228"><search-input vue-id="8dd740cc-1" displayItem="{{displayGame}}" class="data-v-57280228" bind:__l="__l"></search-input><mix-swiper vue-id="8dd740cc-2" imgsUrl="{{imgUrlList}}" class="data-v-57280228" bind:__l="__l"></mix-swiper><mix-card vue-id="8dd740cc-3" gameInfoList="{{imgUrlList}}" class="data-v-57280228" bind:__l="__l"></mix-card></view>

@@ -1,0 +1,1 @@
+<view class="category data-v-3748b078"><block wx:for="{{categories}}" wx:for-item="item" wx:for-index="__i0__" wx:key="name"><view class="category-item data-v-3748b078"><image style="width:48px;height:48px;" src="{{item.url}}" class="data-v-3748b078"></image><text class="data-v-3748b078">{{item.name}}</text></view></block></view>
