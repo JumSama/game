@@ -1,19 +1,21 @@
 
-.card {
+.card.data-v-f15ef1b8 {
 	border-radius: 16rpx;
 	border: 1px solid #D8D8D8;
 	margin: 20rpx;
-	overflow: hidden;
 	box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
 }
-.card-footer {
+.card image.data-v-f15ef1b8 {
+	border-radius: 16rpx;
+}
+.card-footer.data-v-f15ef1b8 {
 	padding: 10rpx 20rpx 20rpx 20rpx;
 	letter-spacing: 1rpx;
 }
-.game-name {
+.game-name.data-v-f15ef1b8 {
 	font-size: 1rem;
 }
-.game-intro {
+.game-intro.data-v-f15ef1b8 {
 	font-size: 0.5rem;
 	color: #368C92;
 	padding-top: 10rpx;
