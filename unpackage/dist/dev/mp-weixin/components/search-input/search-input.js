@@ -139,6 +139,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 var _vue = __webpack_require__(/*! vue */ 2); //
 //
 //
@@ -163,15 +164,21 @@ var _vue = __webpack_require__(/*! vue */ 2); //
 //
 //
 //
-var _default = { props: { displayItem: Array, fake: { type: Boolean, default: true }, hotItem: { type: String, default: '' } }, setup: function setup(props) {// 踩坑：text标签不能使用动画因为他会内嵌一个span标签
+//
+var _default = { props: { displayItem: Array, fake: { type: Boolean, default: true }, hotItem: { type: String, default: '' }, loginAvator: '' }, emits: ['toMine'], setup: function setup(props, context) {// 踩坑：text标签不能使用动画因为他会内嵌一个span标签
     // 1.搜索框推荐功能
-    var nowDisplayIdx = props.displayItem && openDisplay(props);return { nowDisplayIdx: nowDisplayIdx };} }; // 搜索推荐
-exports.default = _default;function openDisplay(props) {var nowDisplayIdx = (0, _vue.ref)(0);var displayItemLength = props.displayItem.length;
+    var nowDisplayIdx = props.displayItem && openDisplay(props);var handleToMine = function handleToMine() {context.emit('toMine');};return { nowDisplayIdx: nowDisplayIdx, handleToMine: handleToMine };
+  } };
+
+
+// 搜索推荐
+exports.default = _default;function openDisplay(props) {
+  var nowDisplayIdx = (0, _vue.ref)(0);
+  var displayItemLength = props.displayItem.length;
   var interval = setInterval(function () {
     nowDisplayIdx.value = (nowDisplayIdx.value + 1) % displayItemLength;
   }, 3000);
   (0, _vue.onBeforeUnmount)(function () {
-    console.log('销毁');
     clearInterval(interval);
   });
   return nowDisplayIdx;

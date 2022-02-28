@@ -2,7 +2,6 @@
 	<view class="search-find">
 		<view class="find-header">
 			<text style="">探索发现</text>
-			<text style="font-size: 12rpx;color: #B9B9B9;">换一换</text>
 		</view>
 		<view class="find-list">
 			<text v-for="item in list" :key="item" class="find-item">{{ item }}</text>

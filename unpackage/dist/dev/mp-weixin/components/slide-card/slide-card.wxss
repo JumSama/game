@@ -5,6 +5,7 @@
 .slide-avator.data-v-07e1b044 {
 	display: flex;
 	overflow-x: scroll;
+	gap: 25rpx;
 }
 .slide-avator.data-v-07e1b044::-webkit-scrollbar {
 	width: 0;
@@ -20,15 +21,16 @@
 .avator-item.data-v-07e1b044 {
 	text-align: center;
 }
-.avator-item.data-v-07e1b044:nth-child(n+2) {
+/* .avator-item:nth-child(n+2) {
 	margin-left: 25rpx;
-}
+} */
 /* CARD mode */
 .slide-card.data-v-07e1b044 {
 	overflow-x: scroll;
 	display: flex;
 	flex-direction: row;
 	height: 550rpx;
+	gap:25rpx;
 }
 .card-item.data-v-07e1b044 {
 	display: flex;
@@ -45,12 +47,13 @@
 	border: 1rpx solid #D8D8D8;
 	border-radius: 0 0 16rpx 16rpx;
 }
-.card-item.data-v-07e1b044:nth-child(n+2) {
+/* .card-item:nth-child(n+2) {
 	margin-left: 25rpx;
 }
-.card-item image.data-v-07e1b044 {
+ */
+/* .card-item image {
 	border-radius: 16rpx 16rpx 0 0;
-}
+} */
 .card-intro.data-v-07e1b044 {
 	color: #868C92;
 	font-size: 24rpx;

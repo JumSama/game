@@ -1,8 +1,8 @@
 <template>
 	<view class="card">
-		<image slot='cover' style="width: 100%; height: 400rpx;" :src="imgurl" mode="scaleToFill"></image>
+		<image slot='cover' style="width: 100%; height: 400rpx;border-radius: 16rpx;" :src="imgurl" mode="scaleToFill"></image>
 		<view class="card-footer">
-			<view class="game-name"><text selectable="false">{{ cardTitle }}</text></view>
+			<view class="game-name"><text>{{ cardTitle }}</text></view>
 			<view class="game-intro">{{ cardIntro }}</view>
 		</view>
 	</view>
@@ -24,10 +24,6 @@
 		border: 1px solid #D8D8D8;
 		margin: 20rpx;
 		box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
-	}
-	
-	.card image {
-		border-radius: 16rpx;
 	}
 	
 	.card-footer {

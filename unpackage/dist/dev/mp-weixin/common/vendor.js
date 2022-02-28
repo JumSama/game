@@ -11,6 +11,82 @@
 
 /***/ }),
 
+/***/ 109:
+/*!*********************************************************!*\
+  !*** C:/Users/Jum/Desktop/uniapp/game/fakeDate/data.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.displayGame = exports.imgUrlList = void 0;var imgUrlList = [{
+  id: 1,
+  url: '../../static/img/swiper/1.jpeg',
+  title: '风暴Ⅲ',
+  intro: 'Lorem ipsum dolor sit amet.' },
+{
+  id: 2,
+  url: '../../static/img/swiper/2.jpeg',
+  title: '雾霾下的空城',
+  intro: 'Lorem ipsum dolor sit amet.' },
+{
+  id: 3,
+  url: '../../static/img/swiper/3.jpeg',
+  title: '冰与火之歌',
+  intro: 'Lorem ipsum dolor sit amet.' },
+{
+  id: 4,
+  url: '../../static/img/swiper/4.jpeg',
+  title: '行动1883',
+  intro: 'Lorem ipsum dolor sit amet.' }];exports.imgUrlList = imgUrlList;
+
+
+var displayGame = ['风暴Ⅲ', '雾霾下的空城', '冰与火之歌', '行动1883'];exports.displayGame = displayGame;
+
+/***/ }),
+
+/***/ 110:
+/*!******************************************************!*\
+  !*** C:/Users/Jum/Desktop/uniapp/game/utils/auth.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.logout = exports.getUserInfo = exports.login = exports.isLogin = exports.user = void 0;var _vue = __webpack_require__(/*! vue */ 2);
+
+var user = (0, _vue.ref)(uni.getStorageSync('_g') && JSON.parse(uni.getStorageSync('_g')) || {});exports.user = user;
+
+var isLogin = (0, _vue.ref)(!!uni.getStorageSync('_g'));exports.isLogin = isLogin;
+
+var login = function login() {
+  // 相关逻辑待补充
+  getUserInfo();
+};exports.login = login;
+
+var getUserInfo = function getUserInfo(e) {
+  uni.getUserProfile({
+    desc: '获取用户名',
+    success: function success(_ref) {var userInfo = _ref.userInfo;
+      user.value = userInfo;
+      isLogin.value = true;
+      uni.setStorageSync('_g', JSON.stringify(userInfo));
+    },
+    fail: function fail(err) {
+      console.log(err);
+    } });
+
+};exports.getUserInfo = getUserInfo;
+
+var logout = function logout() {
+  uni.clearStorageSync('_g');
+  user.value = {};
+  isLogin.value = false;
+};exports.logout = logout;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
+
+/***/ }),
+
 /***/ 12:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!

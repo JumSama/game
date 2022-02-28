@@ -99,10 +99,10 @@ try {
       return __webpack_require__.e(/*! import() | components/search-input/search-input */ "components/search-input/search-input").then(__webpack_require__.bind(null, /*! @/components/search-input/search-input.vue */ 46))
     },
     category: function() {
-      return __webpack_require__.e(/*! import() | components/category/category */ "components/category/category").then(__webpack_require__.bind(null, /*! @/components/category/category.vue */ 53))
+      return __webpack_require__.e(/*! import() | components/category/category */ "components/category/category").then(__webpack_require__.bind(null, /*! @/components/category/category.vue */ 67))
     },
     slideCard: function() {
-      return __webpack_require__.e(/*! import() | components/slide-card/slide-card */ "components/slide-card/slide-card").then(__webpack_require__.bind(null, /*! @/components/slide-card/slide-card.vue */ 60))
+      return __webpack_require__.e(/*! import() | components/slide-card/slide-card */ "components/slide-card/slide-card").then(__webpack_require__.bind(null, /*! @/components/slide-card/slide-card.vue */ 74))
     }
   }
 } catch (e) {
