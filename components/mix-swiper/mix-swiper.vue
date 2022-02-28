@@ -4,7 +4,7 @@
 			<swiper-item v-for="(img,index) in imgsUrl" :key="img.id" class="swiper-item">
 				<image :src="img.url" mode="aspectFill" style="width: 100%;height: 100%;"></image>
 				<view class="introduction">
-					<text selectable="false">{{ img.intro }}</text>
+					<text>{{ img.intro }}</text>
 					
 				</view>
 			</swiper-item>

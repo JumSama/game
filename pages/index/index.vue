@@ -1,41 +1,48 @@
 <template>
 	<view>
-		<search-input :displayItem="displayGame"></search-input>
+		<search-input
+		:displayItem="displayGame"
+		@toMine="judgeLogin"
+		:loginAvator="loginAvator"
+		>
+		</search-input>
 		<mix-swiper :imgsUrl="imgUrlList"></mix-swiper>
 		<view class="card">
-			<mix-card v-for="item in imgUrlList" :key="item.id" :cardIntro="item.intro" :cardTitle="item.title" :imgurl="item.url"></mix-card>
+			<mix-card
+			v-for="item in imgUrlList"
+			:key="item.id" :cardIntro="item.intro"
+			:cardTitle="item.title"
+			:imgurl="item.url"
+			>
+			</mix-card>
 		</view>	
 	</view>
 </template>
 
 <script>
+	import { imgUrlList, displayGame } from '../../fakeDate/data.js'
+	import { isLogin, getUserInfo, user } from '../../utils/auth.js'
+	import { computed, ref } from 'vue'
 	export default {
 		setup() {
-			const imgUrlList = [{
-				id: 1,
-				url: '../../static/img/swiper/1.jpeg',
-				title: '风暴Ⅲ',
-				intro: 'Lorem ipsum dolor sit amet.'
-			}, {
-				id: 2,
-				url: '../../static/img/swiper/2.jpeg',
-				title: '雾霾下的空城',
-				intro: 'Lorem ipsum dolor sit amet.'
-			}, {
-				id: 3,
-				url: '../../static/img/swiper/3.jpeg',
-				title: '冰与火之歌',
-				intro: 'Lorem ipsum dolor sit amet.'
-			}, {
-				id: 4,
-				url: '../../static/img/swiper/4.jpeg',
-				title: '行动1883',
-				intro: 'Lorem ipsum dolor sit amet.'
-			}]
-			const displayGame = ['风暴Ⅲ', '雾霾下的空城', '冰与火之歌', '行动1883']
+			let loginAvator = computed(() => user.value.avatarUrl)
+			
+			const judgeLogin = () => {
+				if (isLogin.value) {
+					uni.switchTab({
+					    url: '/pages/mine/index'
+					});
+				} else {
+					getUserInfo()
+				}
+			}
+
 			return {
 				imgUrlList,
-				displayGame
+				displayGame,
+				judgeLogin,
+				user,
+				loginAvator
 			}
 		}
 	}

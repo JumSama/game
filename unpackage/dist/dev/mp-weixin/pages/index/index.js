@@ -108,10 +108,10 @@ try {
       return __webpack_require__.e(/*! import() | components/search-input/search-input */ "components/search-input/search-input").then(__webpack_require__.bind(null, /*! @/components/search-input/search-input.vue */ 46))
     },
     mixSwiper: function() {
-      return __webpack_require__.e(/*! import() | components/mix-swiper/mix-swiper */ "components/mix-swiper/mix-swiper").then(__webpack_require__.bind(null, /*! @/components/mix-swiper/mix-swiper.vue */ 86))
+      return __webpack_require__.e(/*! import() | components/mix-swiper/mix-swiper */ "components/mix-swiper/mix-swiper").then(__webpack_require__.bind(null, /*! @/components/mix-swiper/mix-swiper.vue */ 53))
     },
     mixCard: function() {
-      return __webpack_require__.e(/*! import() | components/mix-card/mix-card */ "components/mix-card/mix-card").then(__webpack_require__.bind(null, /*! @/components/mix-card/mix-card.vue */ 93))
+      return __webpack_require__.e(/*! import() | components/mix-card/mix-card */ "components/mix-card/mix-card").then(__webpack_require__.bind(null, /*! @/components/mix-card/mix-card.vue */ 60))
     }
   }
 } catch (e) {
@@ -166,46 +166,54 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
-{
-  setup: function setup() {
-    var imgUrlList = [{
-      id: 1,
-      url: '../../static/img/swiper/1.jpeg',
-      title: '风暴Ⅲ',
-      intro: 'Lorem ipsum dolor sit amet.' },
-    {
-      id: 2,
-      url: '../../static/img/swiper/2.jpeg',
-      title: '雾霾下的空城',
-      intro: 'Lorem ipsum dolor sit amet.' },
-    {
-      id: 3,
-      url: '../../static/img/swiper/3.jpeg',
-      title: '冰与火之歌',
-      intro: 'Lorem ipsum dolor sit amet.' },
-    {
-      id: 4,
-      url: '../../static/img/swiper/4.jpeg',
-      title: '行动1883',
-      intro: 'Lorem ipsum dolor sit amet.' }];
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-    var displayGame = ['风暴Ⅲ', '雾霾下的空城', '冰与火之歌', '行动1883'];
-    return {
-      imgUrlList: imgUrlList,
-      displayGame: displayGame };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _data = __webpack_require__(/*! ../../fakeDate/data.js */ 109);
+var _auth = __webpack_require__(/*! ../../utils/auth.js */ 110);
+var _vue = __webpack_require__(/*! vue */ 2); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { setup: function setup() {var loginAvator = (0, _vue.computed)(function () {return _auth.user.value.avatarUrl;});var judgeLogin = function judgeLogin() {if (_auth.isLogin.value) {uni.switchTab({ url: '/pages/mine/index' });} else {(0, _auth.getUserInfo)();}};return { imgUrlList: _data.imgUrlList, displayGame: _data.displayGame, judgeLogin: judgeLogin, user: _auth.user, loginAvator: loginAvator };
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
 
 /***/ }),
 /* 19 */

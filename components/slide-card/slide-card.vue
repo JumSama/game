@@ -14,7 +14,7 @@
 		
 		<view class="slide-card" v-else-if="mode === 'CARD'">
 			<view class="card-item" v-for="item in dataList" :key="item.id">
-				<image :src="item.url" mode="" style="width: 600rpx;height:60%;"></image>
+				<image :src="item.url" mode="" style="width: 600rpx;height:60%;border-radius: 16rpx 16rpx 0 0;"></image>
 				<view class="card-body" style="height: 40%; width: 598rpx; ">
 					<view class="card-intro">
 						{{ item.intro }}
@@ -49,6 +49,7 @@
 	.slide-avator {
 		display: flex;
 		overflow-x: scroll;
+		gap: 25rpx;
 	}
 	
 	.slide-avator::-webkit-scrollbar {
@@ -68,9 +69,9 @@
 		text-align: center;
 	}
 	
-	.avator-item:nth-child(n+2) {
+	/* .avator-item:nth-child(n+2) {
 		margin-left: 25rpx;
-	}
+	} */
 	/* CARD mode */
 	
 	.slide-card {
@@ -78,6 +79,7 @@
 		display: flex;
 		flex-direction: row;
 		height: 550rpx;
+		gap:25rpx;
 	}
 	
 	.card-item {
@@ -97,13 +99,13 @@
 		border-radius: 0 0 16rpx 16rpx;
 	}
 	
-	.card-item:nth-child(n+2) {
+	/* .card-item:nth-child(n+2) {
 		margin-left: 25rpx;
 	}
-	
-	.card-item image {
+	 */
+	/* .card-item image {
 		border-radius: 16rpx 16rpx 0 0;
-	}
+	} */
 	
 	.card-intro {
 		color: #868C92;

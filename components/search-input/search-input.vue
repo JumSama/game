@@ -8,8 +8,9 @@
 				</template>
 			</navigator>
 		</view>
-		<view class="avator">
-			<text class="iconfont icon-wode" style="font-size: 44rpx;"></text>
+		<view class="avator" @click="handleToMine">
+			<image v-if="loginAvator" :src="loginAvator" style="width: 60rpx; height: 60rpx; border-radius: 30rpx;" mode="aspectFill"></image>
+			<text v-else class="iconfont icon-wode" style="font-size: 44rpx;"></text>
 		</view>
 	</view>
 	
@@ -34,15 +35,22 @@
 			hotItem: {
 				type: String,
 				default: ''
-			}
+			},
+			loginAvator: ''
 		},
-		setup(props) {
+		emits: ['toMine'],
+		setup(props, context) {
 			// 踩坑：text标签不能使用动画因为他会内嵌一个span标签
 			// 1.搜索框推荐功能
-			let nowDisplayIdx = props.displayItem && openDisplay(props)
+			let nowDisplayIdx = props.displayItem && openDisplay(props)		
+			
+			let handleToMine = () => {
+				context.emit('toMine')
+			}
 			
 			return {
-				nowDisplayIdx
+				nowDisplayIdx,
+				handleToMine
 			}
 		}
 	}
@@ -55,7 +63,6 @@
 			nowDisplayIdx.value = (nowDisplayIdx.value + 1) % displayItemLength
 		}, 3000)
 		onBeforeUnmount(() => {
-			console.log('销毁')
 			clearInterval(interval)
 		})
 		return nowDisplayIdx
