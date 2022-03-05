@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "search-input": "/components/search-input/search-input",
-    "category": "/components/category/category",
-    "slide-card": "/components/slide-card/slide-card"
-  }
-}

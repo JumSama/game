@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "search-input": "/components/search-input/search-input",
-    "mix-swiper": "/components/mix-swiper/mix-swiper",
-    "mix-card": "/components/mix-card/mix-card"
-  }
-}
